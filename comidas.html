@@ -30,11 +30,11 @@
         <div class="album py-5 bg-light">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div v-for="(item, index) in items" :key="index" class="col">
-                        <div v-if="item.tipo === 'comida'">
+                    <template v-for="(item, index) in items" :key="index">
+                        <div v-if="item.tipo === 'comida'" class="col">                    
                             <item-cp :item="item"></item-cp>
                         </div>
-                    </div>
+                    </template>
                 </div>
             </div>
         </div>

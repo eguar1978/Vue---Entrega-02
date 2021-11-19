@@ -12,7 +12,7 @@ Vue.component('item-cp', {
                                     <div class="btn-group">
                                         $ {{ item.costo }}
                                     </div>
-                                    <small class="text-muted">{ Boton Comprar }</small>
+                                    <small class="text-muted"><boton-cp></boton-cp></small>
                                 </div>
                             </div>
                         </div>
