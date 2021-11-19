@@ -6,11 +6,11 @@ Vue.component('item-cp', {
                         <div class="card shadow-sm">
                             <img class="img-producto" :src="item.imagen" alt="" srcset="" />
                             <div class="card-body">
-                                <h3> { Fruta } </h3>
-                                <p class="card-text">{ Descripcion }</p>
+                                <h3> {{ item.titulo }} </h3>
+                                <p class="card-text">{{ item.descripcion }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        { Precio }
+                                        $ {{ item.costo }}
                                     </div>
                                     <small class="text-muted">{ Boton Comprar }</small>
                                 </div>
@@ -19,6 +19,7 @@ Vue.component('item-cp', {
                     
                     <!-- FIN DE CARD -->
     `,
+    /*
     data: {
         items: [{
             id: 1,
@@ -140,5 +141,5 @@ Vue.component('item-cp', {
             descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
             tipo: "comida"
         }, ]
-    }
+}*/
 })

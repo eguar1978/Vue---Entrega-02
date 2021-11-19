@@ -18,8 +18,8 @@ Vue.component('footer-cp', {
                 </div>
                 <!-- Copyright -->
                 <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                    © 2020 Copyright:
-                    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    © 2021 Copyright:
+                    <a class="text-white" href="http://comidasweb.com/">ComidasWeb.com</a>
                 </div>
                 <!-- Copyright -->
             </footer>
