@@ -16,83 +16,9 @@
 
 <body>
 
-    <script src="componentes/Boton.js"></script>
-    <script src="componentes/Navbar.js"></script>
-    <script src="componentes/Item.js"></script>
-    <script src="componentes/Footer.js"></script>
-    <script src="componentes/Banner.js"></script>
-    <script src="componentes/Lista.js"></script>
-
-
     <div id="app">
 
-
-        <navbar-cp></navbar-cp>
-
-        <banner-cp :titulo="titulo"></banner-cp>
-
-        <div class="album py-1 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 justify-content-center container-banner">
-                        <div class="container mt-3">
-                            <h2>Listado de comidas</h2>
-                            <table class="table table-based">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Promocionado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <template v-for="(item, index) in items" :key="index">
-                                        <template v-if="item.tipo === 'comida'">
-                                            <template v-if="item.promocionado">
-                                                <lista-cp :item="item" class="table-success"></lista-cp>
-                                            </template>
-                                    <template v-else>
-                                                <lista-cp :item="item" class="table-danger"></lista-cp>
-                                            </template>
-                                    </template>
-                                    </template>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="col-12 justify-content-center container-banner">
-                        <div class="container mt-3">
-                            <h2>Listado de Frutas y Verduras</h2>
-                            <table class="table table-based">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Promocionado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <template v-for="(item, index) in items" :key="index">
-                                        <template v-if="item.tipo === 'fyv'">
-                                            <template v-if="item.promocionado">
-                                                <lista-cp :item="item" class="table-success"></lista-cp>
-                                            </template>
-                                    <template v-else>
-                                                <lista-cp :item="item" class="table-danger"></lista-cp>
-                                            </template>
-                                    </template>
-                                    </template>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <footer-cp></footer-cp>
+        <container-cp :titulo="titulo" :items="items"></container-cp>
 
 
 </body>

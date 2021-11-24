@@ -1,11 +1,46 @@
+Vue.component("container-cp", {
+    props: ['titulo', 'items'],
+    template: /* html */ `
+                <div class="album py-1 bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 justify-content-center container-banner">
+                                <div class="container mt-3">
+                                    <h2>{{titulo}}</h2>
+                                    <table class="table table-based">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Promocionado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="(item, index) in items" :key="index" :class="item.promocionado ? 'table-success' : 'table-info'">
+                                                <td> {{ item.titulo }} </td>
+                                                <td>$ {{ item.costo }} </td>
+                                                <td v-if="item.promocionado"> 10% OFF </td>
+                                                <td v-else> sin promocion </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
+});
+
+
 const app = new Vue({
     el: '#app',
     data: {
-        titulo: 'Bienvenidos a Comidas Web',
+        titulo: 'Bienvenidos a Comidas Webaaaa',
         items: [{
             id: 1,
             titulo: "Anana",
-            costo: 50,
+            costo: 51,
             imagen: "images/fyv/anana.jpeg",
             descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
             tipo: "fyv",
@@ -82,76 +117,6 @@ const app = new Vue({
             descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
             tipo: "fyv",
             promocionado: false
-        }, {
-            id: 11,
-            titulo: "Menu 1",
-            costo: 50,
-            imagen: "images/comidas/menu1.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: true
-        }, {
-            id: 12,
-            titulo: "Menu 2",
-            costo: 35,
-            imagen: "images/comidas/menu2.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: true
-        }, {
-            id: 13,
-            titulo: "Menu 3",
-            costo: 50,
-            imagen: "images/comidas/menu3.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: false
-        }, {
-            id: 14,
-            titulo: "Menu 4",
-            costo: 35,
-            imagen: "images/comidas/menu4.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: true
-        }, {
-            id: 15,
-            titulo: "Menu 5",
-            costo: 50,
-            imagen: "images/comidas/menu5.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: false
-        }, {
-            id: 16,
-            titulo: "Manu 6",
-            costo: 35,
-            imagen: "images/comidas/menu6.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: false
-        }, {
-            id: 17,
-            titulo: "Menu 7",
-            costo: 50,
-            imagen: "images/comidas/menu7.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: true
-        }, {
-            id: 18,
-            titulo: "Menu 8",
-            costo: 50,
-            imagen: "images/comidas/menu8.jpeg",
-            descripcion: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomise",
-            tipo: "comida",
-            promocionado: true
-        }, ]
-    },
-    methods: {
-
-    },
-    computed: {
-
+        }]
     }
 })
