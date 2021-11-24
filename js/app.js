@@ -36,7 +36,7 @@ Vue.component("container-cp", {
 const app = new Vue({
     el: '#app',
     data: {
-        titulo: 'Bienvenidos a Comidas Webaaaa',
+        titulo: 'Comidas Web',
         items: [{
             id: 1,
             titulo: "Anana",
